@@ -1,39 +1,41 @@
-# PCA Compressor
+# <span style="color:#00d4ff">P</span><span style="color:#ffb347">C</span><span style="color:#ff6b9d">A</span> Compressor
 
 **An interactive portfolio showcasing Principal Component Analysis for image compression.**
 
-A web application that compresses images using eigen-decomposition while preserving maximum visual quality.
+> A web application that compresses images using eigen-decomposition while preserving maximum visual quality.
 
-[Launch App](https://portfolio-eight-mu-n7cgc7espl.vercel.app/) Â· [Source Code](https://github.com/kushalchalla981-tech/pcaupgraded)
+[![Live Portfolio](https://img.shields.io/badge/Live%20Portfolio-00d4ff?style=for-the-badge&logo=rocket&logoColor=black)](https://portfolio-eight-mu-n7cgc7espl.vercel.app/)
+[![Live App](https://img.shields.io/badge/Live%20App-ffb347?style=for-the-badge&logo=vercel&logoColor=black)](https://pcaupgraded.vercel.app)
+[![Source](https://img.shields.io/badge/Source-GitHub-ff6b9d?style=for-the-badge&logo=github&logoColor=black)](https://github.com/kushalchalla981-tech/pcaupgraded)
 
 ---
 
-## Overview
+## <span style="color:#00d4ff">â–Ž</span> Overview
 
-This portfolio presents the PCA Compressor - a tool that applies linear algebra concepts to reduce image file sizes while maintaining perceptual quality. The mathematics behind it: covariance matrices, eigenvalue decomposition, and dimensionality reduction.
+This portfolio presents the **PCA Compressor** - a tool that applies linear algebra concepts to reduce image file sizes while maintaining perceptual quality.
 
 Unlike traditional portfolios focused on individuals, this showcase highlights the **application itself** - its features, underlying mathematics, and technical implementation.
 
 ---
 
-## Features
+## <span style="color:#ffb347">â–Ž</span> Features
 
-| Feature | Description |
-|---------|-------------|
-| **PCA Compression** | Dimensionality reduction via eigen-decomposition |
-| **Eigen Analysis** | Real-time eigenvalue and eigenvector visualization |
-| **Auto Rotation** | Principal axis detection for tilt correction |
-| **Quality Metrics** | SSIM and PSNR for perceptual assessment |
-| **Per-Channel Mode** | Independent RGB channel processing |
-| **Drag & Drop** | Simple file upload with JPG/PNG support |
+| | Feature | Description |
+|:-|---------|-------------|
+| <span style="color:#00d4ff">â—‰</span> | **PCA Compression** | Dimensionality reduction via eigen-decomposition |
+| <span style="color:#ffb347">â—‰</span> | **Eigen Analysis** | Real-time eigenvalue and eigenvector visualization |
+| <span style="color:#ff6b9d">â—‰</span> | **Auto Rotation** | Principal axis detection for tilt correction |
+| <span style="color:#00d4ff">â—‰</span> | **Quality Metrics** | SSIM and PSNR for perceptual assessment |
+| <span style="color:#ffb347">â—‰</span> | **Per-Channel Mode** | Independent RGB channel processing |
+| <span style="color:#ff6b9d">â—‰</span> | **Drag & Drop** | Simple file upload with JPG/PNG support |
 
 ---
 
-## The Mathematics
+## <span style="color:#ff6b9d">â–Ž</span> The Mathematics
 
 **Principal Component Analysis** transforms correlated variables into uncorrelated principal components, ranked by variance explained.
 
-```
+```mathematica
 Covariance Matrix:     C = (X - Î¼)áµ€(X - Î¼) / (n-1)
 
 Eigen-Decomposition:   CÂ·v = Î»Â·v
@@ -47,36 +49,48 @@ The first principal component captures the direction of maximum variance. By kee
 
 ---
 
-## How It Works
+## <span style="color:#00d4ff">â–Ž</span> How It Works
 
-1. **Center Data** - Subtract mean from all observations
-2. **Compute Covariance** - Calculate the covariance matrix C
-3. **Eigen-Decompose** - Find eigenvalues Î»áµ¢ and eigenvectors váµ¢
-4. **Project** - Project data onto k largest eigenvectors
-5. **Reconstruct** - Build approximation from reduced data
+```
+â‘  Center Data      â†’  Subtract mean from all observations
+â‘¡ Compute          â†’  Calculate the covariance matrix C  
+â‘¢ Eigen-Decompose â†’  Find eigenvalues Î»áµ¢ and eigenvectors váµ¢
+â‘£ Project         â†’  Project data onto k largest eigenvectors
+â‘¤ Reconstruct     â†’  Build approximation from reduced data
+```
 
 ---
 
-## Performance
+## <span style="color:#ffb347">â–Ž</span> Performance
 
 | Image Size | Processing Time | Memory | Quality |
-|------------|-----------------|--------|---------|
-| Small (<1MP) | <100ms | ~50MB | SSIM > 0.95 |
-| Medium (1-4MP) | 500ms-2s | ~200MB | SSIM > 0.90 |
-| Large (4-12MP) | 2-5s | ~500MB | SSIM > 0.85 |
+|:-----------|:--------------|:-------|:--------|
+| Small (<1MP) | <span style="color:#00d4ff">**<100ms**</span> | ~50MB | SSIM > 0.95 |
+| Medium (1-4MP) | <span style="color:#ffb347">**500ms-2s**</span> | ~200MB | SSIM > 0.90 |
+| Large (4-12MP) | <span style="color:#ff6b9d">**2-5s**</span> | ~500MB | SSIM > 0.85 |
 
 ---
 
-## Tech Stack
+## <span style="color:#ff6b9d">â–Ž</span> Color Palette
 
-- **JavaScript** - Core logic and Canvas API
-- **CSS3** - Animations and styling
-- **Linear Algebra** - PCA and eigen decomposition
-- **Vercel** - Deployment
+| | Color | Hex | Usage |
+|:-|-------|-----|-------|
+| <span style="color:#00d4ff">â—</span> | **Cyan** | `#00d4ff` | Primary accent, Î»â‚ |
+| <span style="color:#ffb347">â—</span> | **Amber** | `#ffb347` | Secondary accent, Î»â‚‚ |
+| <span style="color:#ff6b9d">â—</span> | **Magenta** | `#ff6b9d` | Tertiary accent, Î»â‚ƒ |
 
 ---
 
-## Quick Start
+## <span style="color:#00d4ff">â–Ž</span> Tech Stack
+
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
+![Linear Algebra](https://img.shields.io/badge/Linear%20Algebra-Math-blue?style=flat)
+![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat&logo=vercel&logoColor=white)
+
+---
+
+## <span style="color:#ffb347">â–Ž</span> Quick Start
 
 ```bash
 # Clone the repository
@@ -92,8 +106,16 @@ npx serve
 
 ---
 
-## Links
+## <span style="color:#ff6b9d">â–Ž</span> Links
 
-- [Live Portfolio](https://portfolio-eight-mu-n7cgc7espl.vercel.app/)
-- [Live App](https://pcaupgraded.vercel.app)
-- [Source Repository](https://github.com/kushalchalla981-tech/pcaupgraded)
+| | Platform | Link |
+|:-|----------|------|
+| ðŸš€ | **Live Portfolio** | [portfolio-eight-mu-n7cgc7espl.vercel.app](https://portfolio-eight-mu-n7cgc7espl.vercel.app/) |
+| ðŸŒ | **Live App** | [pcaupgraded.vercel.app](https://pcaupgraded.vercel.app) |
+| ðŸ“‚ | **Source Repository** | [github.com/kushalchalla981-tech/pcaupgraded](https://github.com/kushalchalla981-tech/pcaupgraded) |
+
+---
+
+<p align="center">
+  <sub>Built with</sub> <span style="color:#00d4ff">â—†</span> <sub>Linear Algebra &</sub> <span style="color:#ffb347">â—†</span> <sub>JavaScript</sub>
+</p>
