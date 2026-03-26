@@ -164,8 +164,8 @@ document.addEventListener('DOMContentLoaded', () => {
         particles.update();
         particles.draw(ctx);
 
-        const scrollFactor = scrollY * 0.0003;
-        icosahedron.rotate(scrollFactor * 0.2, scrollFactor * 0.3, scrollFactor * 0.1);
+        const scrollFactor = scrollY * 0.0001;
+        icosahedron.rotate(scrollFactor * 0.1, scrollFactor * 0.15, scrollFactor * 0.05);
         icosahedron.draw(ctx, width, height);
 
         time++;
