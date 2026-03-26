@@ -18,150 +18,171 @@ document.addEventListener('DOMContentLoaded', () => {
     resize();
     window.addEventListener('resize', resize);
 
-    const phi = (1 + Math.sqrt(5)) / 2;
-
-    class Icosahedron {
-        constructor(scale = 1) {
-            this.scale = scale;
-            this.rotation = { x: 0.3, y: 0, z: 0 };
-            this.vertices = [
-                [-1, phi, 0], [1, phi, 0], [-1, -phi, 0], [1, -phi, 0],
-                [0, -1, phi], [0, 1, phi], [0, -1, -phi], [0, 1, -phi],
-                [phi, 0, -1], [phi, 0, 1], [-phi, 0, -1], [-phi, 0, 1]
-            ].map(v => v.map(c => c * scale));
-
-            this.edges = [
-                [0,1],[0,5],[0,7],[0,10],[0,11],
-                [1,5],[1,7],[1,8],[1,9],
-                [2,3],[2,4],[2,10],[2,11],
-                [3,4],[3,8],[3,9],
-                [4,5],[4,9],[4,11],
-                [5,9],[5,11],
-                [6,7],[6,8],[6,10],[6,11],
-                [7,8],[7,10],
-                [8,9],[10,11]
-            ];
+    class Starfield {
+        constructor(count = 600) {
+            this.stars = [];
+            for (let i = 0; i < count; i++) {
+                this.stars.push({
+                    x: Math.random() * width - width / 2,
+                    y: Math.random() * height - height / 2,
+                    z: Math.random() * 1500,
+                    color: colors[Math.floor(Math.random() * 3)],
+                    size: Math.random() * 1.5 + 0.5
+                });
+            }
         }
 
-        project(vert, w, h) {
-            const cosX = Math.cos(this.rotation.x);
-            const sinX = Math.sin(this.rotation.x);
-            const cosY = Math.cos(this.rotation.y);
-            const sinY = Math.sin(this.rotation.y);
-            const cosZ = Math.cos(this.rotation.z);
-            const sinZ = Math.sin(this.rotation.z);
-
-            let x = vert[0], y = vert[1], z = vert[2];
-
-            let temp = y * cosX - z * sinX;
-            z = z * cosX + y * sinX;
-            y = temp;
-
-            temp = x * cosY + z * sinY;
-            z = z * cosY - x * sinY;
-            x = temp;
-
-            temp = x * cosZ - y * sinZ;
-            y = y * cosZ + x * sinZ;
-            x = temp;
-
-            const scale = 300 / (z + 400);
-            return {
-                x: x * scale + w / 2,
-                y: -y * scale + h / 2,
-                z: z,
-                scale: scale
-            };
-        }
-
-        draw(ctx, w, h) {
-            const projected = this.vertices.map(v => this.project(v, w, h));
-            
-            const edges2d = this.edges.map(([i, j]) => ({
-                p1: projected[i],
-                p2: projected[j],
-                z: (projected[i].z + projected[j].z) / 2
-            }));
-
-            edges2d.sort((a, b) => a.z - b.z);
-
-            edges2d.forEach((edge, i) => {
-                const alpha = Math.max(0.1, Math.min(0.6, (edge.z + 200) / 400));
-                const colorIndex = i % 3;
-                ctx.strokeStyle = colors[colorIndex];
-                ctx.globalAlpha = alpha;
-                ctx.lineWidth = 1 + (edge.z + 200) / 400;
-                ctx.beginPath();
-                ctx.moveTo(edge.p1.x, edge.p1.y);
-                ctx.lineTo(edge.p2.x, edge.p2.y);
-                ctx.stroke();
+        update(speed) {
+            this.stars.forEach(star => {
+                star.z -= speed;
+                if (star.z <= 0) {
+                    star.z = 1500;
+                    star.x = Math.random() * width - width / 2;
+                    star.y = Math.random() * height - height / 2;
+                }
             });
+        }
 
-            projected.forEach((p, i) => {
-                ctx.fillStyle = colors[i % 3];
-                ctx.globalAlpha = 0.3;
+        draw(ctx) {
+            this.stars.forEach(star => {
+                const scale = 1000 / (star.z + 1);
+                const x = star.x * scale + width / 2;
+                const y = star.y * scale + height / 2;
+                const size = star.size * scale;
+                
+                if (x < 0 || x > width || y < 0 || y > height) return;
+                
+                const alpha = Math.min(1, (1500 - star.z) / 500);
+                ctx.fillStyle = star.color;
+                ctx.globalAlpha = alpha * 0.6;
                 ctx.beginPath();
-                ctx.arc(p.x, p.y, 3 * p.scale, 0, Math.PI * 2);
+                ctx.arc(x, y, size, 0, Math.PI * 2);
                 ctx.fill();
             });
         }
+    }
 
-        rotate(dx, dy, dz) {
-            this.rotation.x += dx;
-            this.rotation.y += dy;
-            this.rotation.z += dz;
+    class SpiralTrail {
+        constructor() {
+            this.points = [];
+            this.maxPoints = 120;
+            this.angle = 0;
+        }
+
+        update() {
+            this.angle += 0.02;
+            const progress = (time % 300) / 300;
+            const radius = 50 + progress * 300;
+            const spiralTurns = 4;
+            const theta = this.angle + spiralTurns * progress * Math.PI * 2;
+            
+            const x = Math.cos(theta) * radius;
+            const y = Math.sin(theta) * radius - progress * 200;
+            
+            this.points.unshift({
+                x: x + width / 2,
+                y: y + height / 2,
+                alpha: 1,
+                size: 3 - progress * 2.5
+            });
+            
+            if (this.points.length > this.maxPoints) {
+                this.points.pop();
+            }
+            
+            this.points.forEach((p, i) => {
+                p.alpha = 1 - (i / this.maxPoints);
+            });
+        }
+
+        draw(ctx) {
+            this.points.forEach((point, i) => {
+                if (i === 0) return;
+                
+                const prev = this.points[i - 1];
+                const colorIndex = i % 3;
+                
+                ctx.strokeStyle = colors[colorIndex];
+                ctx.globalAlpha = point.alpha * 0.4;
+                ctx.lineWidth = point.size;
+                ctx.beginPath();
+                ctx.moveTo(prev.x, prev.y);
+                ctx.lineTo(point.x, point.y);
+                ctx.stroke();
+                
+                ctx.fillStyle = colors[colorIndex];
+                ctx.globalAlpha = point.alpha * 0.6;
+                ctx.beginPath();
+                ctx.arc(point.x, point.y, point.size * 0.5, 0, Math.PI * 2);
+                ctx.fill();
+            });
         }
     }
 
-    class FloatingParticles {
-        constructor(count = 50) {
+    class SpiralParticles {
+        constructor(count = 80) {
             this.particles = [];
             for (let i = 0; i < count; i++) {
                 this.particles.push({
-                    x: Math.random() * width,
-                    y: Math.random() * height,
-                    z: Math.random() * 200 - 100,
-                    size: Math.random() * 2 + 1,
+                    angle: Math.random() * Math.PI * 2,
+                    radius: 100 + Math.random() * 400,
+                    speed: 0.005 + Math.random() * 0.01,
+                    z: Math.random() * 1000,
                     color: colors[Math.floor(Math.random() * 3)],
-                    speed: Math.random() * 0.5 + 0.2
+                    size: 1 + Math.random() * 2,
+                    twinkle: Math.random() * Math.PI * 2
                 });
             }
         }
 
         update() {
             this.particles.forEach(p => {
-                p.y += p.speed;
-                if (p.y > height) {
-                    p.y = -10;
-                    p.x = Math.random() * width;
+                p.angle += p.speed;
+                p.z -= 2;
+                p.twinkle += 0.05;
+                if (p.z <= 0) {
+                    p.z = 1000;
+                    p.radius = 100 + Math.random() * 400;
                 }
             });
         }
 
         draw(ctx) {
             this.particles.forEach(p => {
-                const scale = 300 / (p.z + 400);
+                const scale = 500 / (p.z + 1);
+                const x = Math.cos(p.angle) * p.radius * scale * 0.3 + width / 2;
+                const y = Math.sin(p.angle) * p.radius * scale * 0.3 + height / 2;
+                const size = p.size * scale * 0.5;
+                
+                if (x < 0 || x > width || y < 0 || y > height) return;
+                
+                const twinkleAlpha = 0.3 + Math.sin(p.twinkle) * 0.2;
                 ctx.fillStyle = p.color;
-                ctx.globalAlpha = 0.15 * scale;
+                ctx.globalAlpha = twinkleAlpha;
                 ctx.beginPath();
-                ctx.arc(p.x, p.y, p.size * scale, 0, Math.PI * 2);
+                ctx.arc(x, y, Math.max(0.5, size), 0, Math.PI * 2);
                 ctx.fill();
             });
         }
     }
 
-    const icosahedron = new Icosahedron(80);
-    const particles = new FloatingParticles(40);
+    const starfield = new Starfield(500);
+    const spiralTrail = new SpiralTrail();
+    const spiralParticles = new SpiralParticles(100);
 
     function animate() {
         ctx.fillStyle = '#0a0a0a';
+        ctx.globalAlpha = 1;
         ctx.fillRect(0, 0, width, height);
 
-        particles.update();
-        particles.draw(ctx);
+        starfield.update(3);
+        starfield.draw(ctx);
 
-        icosahedron.rotate(0.001, 0.002, 0.0005);
-        icosahedron.draw(ctx, width, height);
+        spiralTrail.update();
+        spiralTrail.draw(ctx);
+
+        spiralParticles.update();
+        spiralParticles.draw(ctx);
 
         time++;
         requestAnimationFrame(animate);
