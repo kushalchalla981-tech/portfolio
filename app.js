@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const colors = ['#00d4ff', '#ffb347', '#ff6b9d'];
 
     let width, height;
-    let scrollY = 0;
     let time = 0;
 
     function resize() {
@@ -18,9 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     resize();
     window.addEventListener('resize', resize);
-    window.addEventListener('scroll', () => {
-        scrollY = window.scrollY;
-    });
 
     const phi = (1 + Math.sqrt(5)) / 2;
 
@@ -164,8 +160,7 @@ document.addEventListener('DOMContentLoaded', () => {
         particles.update();
         particles.draw(ctx);
 
-        const scrollFactor = scrollY * 0.0001;
-        icosahedron.rotate(scrollFactor * 0.1, scrollFactor * 0.15, scrollFactor * 0.05);
+        icosahedron.rotate(0.001, 0.002, 0.0005);
         icosahedron.draw(ctx, width, height);
 
         time++;
