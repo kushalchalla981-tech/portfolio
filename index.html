@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PCA Compressor - Interactive showcase portfolio. Image compression using Principal Component Analysis">
+    <meta name="author" content="Kushal Challa">
+    <title>PCA Compressor - Interactive Showcase</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="noise-overlay"></div>
+    <div class="color-glow glow-cyan"></div>
+    <div class="color-glow glow-amber"></div>
+    <div class="color-glow glow-magenta"></div>
+
+    <nav class="nav">
+        <div class="nav-logo">
+            <span class="logo-text">PCA</span>
+            <span class="logo-accent">UPGRADED</span>
+        </div>
+        <div class="nav-links">
+            <a href="#overview" class="nav-link active">Overview</a>
+            <a href="#features" class="nav-link">Features</a>
+            <a href="#how-it-works" class="nav-link">How It Works</a>
+            <a href="#demo" class="nav-link">Live Demo</a>
+            <a href="https://pcaupgraded.vercel.app" target="_blank" class="nav-btn">Launch App</a>
+        </div>
+    </nav>
+
+    <main>
+        <section id="overview" class="section hero-section">
+            <div class="math-grid">
+                <div class="grid-line grid-line-1"></div>
+                <div class="grid-line grid-line-2"></div>
+                <div class="grid-line grid-line-3"></div>
+                <div class="grid-line grid-line-4"></div>
+                <div class="grid-line grid-line-5"></div>
+                <div class="floating-symbol symbol-1 text-cyan">Î»â‚</div>
+                <div class="floating-symbol symbol-2 text-amber">âˆ‘</div>
+                <div class="floating-symbol symbol-3 text-magenta">Î£</div>
+                <div class="floating-symbol symbol-4 text-cyan">âˆ«</div>
+                <div class="floating-symbol symbol-5 text-amber">Î±</div>
+                <div class="floating-symbol symbol-6 text-magenta">Î²</div>
+            </div>
+
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-meta">
+                        <span class="hero-tag gradient-text-cyan">IMAGE COMPRESSION</span>
+                        <span class="hero-divider">/</span>
+                        <span class="hero-year text-amber">2026</span>
+                    </div>
+                    <h1 class="hero-title">
+                        <span class="title-line title-line-1">Principal</span>
+                        <span class="title-line title-line-2 gradient-text-amber">Component</span>
+                        <span class="title-line title-line-3">Analysis</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        An exploration of dimensionality reduction through eigen-decomposition. 
+                        Compress images while preserving maximum visual quality using the power of linear algebra.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="https://pcaupgraded.vercel.app" target="_blank" class="btn btn-gradient">
+                            <span class="btn-text">Try It Now</span>
+                            <span class="btn-icon">â†’</span>
+                        </a>
+                        <a href="https://github.com/kushalchalla981-tech/pcaupgraded" target="_blank" class="btn btn-outline">
+                            <span class="btn-text">View Source</span>
+                            <span class="btn-icon">â†—</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="formula-display formula-enhanced">
+                        <div class="formula-title gradient-text-cyan">Covariance Matrix</div>
+                        <div class="formula-row formula-row-1">
+                            <span class="formula-var text-cyan">C</span>
+                            <span class="formula-op text-muted">=</span>
+                            <span class="formula-sum text-amber">âˆ‘</span>
+                            <span class="formula-paren text-muted">(</span>
+                            <span class="formula-var text-cyan">x</span>
+                            <span class="formula-sub">i</span>
+                            <span class="formula-op text-muted">-</span>
+                            <span class="formula-var text-magenta">Î¼</span>
+                            <span class="formula-paren text-muted">)</span>
+                            <span class="formula-paren text-muted">(</span>
+                            <span class="formula-var text-cyan">x</span>
+                            <span class="formula-sub">i</span>
+                            <span class="formula-op text-muted">-</span>
+                            <span class="formula-var text-magenta">Î¼</span>
+                            <span class="formula-paren text-muted">)</span>
+                            <sup class="formula-sup text-amber">T</sup>
+                        </div>
+                        <div class="formula-divider"></div>
+                        <div class="formula-title gradient-text-amber">Eigen-Decomposition</div>
+                        <div class="formula-row formula-row-2">
+                            <span class="formula-var text-cyan">C</span>
+                            <span class="formula-var text-cyan">v</span>
+                            <span class="formula-sub">i</span>
+                            <span class="formula-op text-muted">=</span>
+                            <span class="formula-var text-amber">Î»</span>
+                            <span class="formula-sub">i</span>
+                            <span class="formula-var text-cyan">v</span>
+                            <span class="formula-sub">i</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-indicator">
+                <span>Scroll to explore</span>
+                <div class="scroll-arrow">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 5v14M5 12l7 7 7-7"/>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="section features-section">
+            <div class="section-header">
+                <span class="section-tag text-magenta">CAPABILITIES</span>
+                <h2 class="section-title">What Makes It <span class="gradient-text-cyan">Powerful</span></h2>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card card-cyan">
+                    <div class="card-icon-wrapper ring-cyan">
+                        <svg class="card-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor">
+                            <circle cx="24" cy="24" r="16" stroke-width="1.5"/>
+                            <path d="M24 12 L24 36 M12 24 L36 24" stroke-width="1"/>
+                            <circle cx="24" cy="12" r="2" fill="currentColor"/>
+                            <circle cx="24" cy="36" r="2" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="card-title text-cyan">PCA Compression</h3>
+                    <p class="card-text">Dimensionality reduction via eigen-decomposition. Retain the most important variance while discarding redundant information.</p>
+                </div>
+
+                <div class="feature-card card-amber">
+                    <div class="card-icon-wrapper ring-amber">
+                        <svg class="card-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor">
+                            <line x1="8" y1="40" x2="40" y2="40" stroke-width="1.5"/>
+                            <line x1="8" y1="40" x2="8" y2="16" stroke-width="1.5"/>
+                            <path d="M8 32 L16 24 L24 28 L40 12" stroke-width="1.5" stroke-linecap="round"/>
+                            <circle cx="16" cy="24" r="2" fill="currentColor"/>
+                            <circle cx="24" cy="28" r="2" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="card-title text-amber">Eigen Analysis</h3>
+                    <p class="card-text">Real-time eigenvalue and eigenvector visualization. Understand how your image's data is distributed across principal components.</p>
+                </div>
+
+                <div class="feature-card card-magenta">
+                    <div class="card-icon-wrapper ring-magenta">
+                        <svg class="card-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor">
+                            <path d="M24 8 L24 40" stroke-width="1.5" stroke-dasharray="4 2"/>
+                            <path d="M8 24 C12 20, 20 20, 24 24 C28 28, 36 28, 40 24" stroke-width="1.5"/>
+                            <circle cx="24" cy="24" r="4" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="card-title text-magenta">Auto Rotation</h3>
+                    <p class="card-text">Smart tilt correction using principal axis detection. Automatically finds and corrects image orientation issues.</p>
+                </div>
+
+                <div class="feature-card card-cyan">
+                    <div class="card-icon-wrapper ring-cyan">
+                        <svg class="card-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor">
+                            <rect x="8" y="8" width="32" height="32" rx="2" stroke-width="1.5"/>
+                            <path d="M8 24 L40 24" stroke-width="1" stroke-dasharray="2 2"/>
+                            <path d="M8 16 L40 16 M8 32 L40 32" stroke-width="0.5" opacity="0.5"/>
+                        </svg>
+                    </div>
+                    <h3 class="card-title text-cyan">Quality Metrics</h3>
+                    <p class="card-text">SSIM and PSNR metrics for perceptual assessment. Know exactly how your compressed image compares to the original.</p>
+                </div>
+
+                <div class="feature-card card-amber">
+                    <div class="card-icon-wrapper ring-amber">
+                        <svg class="card-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor">
+                            <circle cx="12" cy="12" r="6" stroke-width="1.5"/>
+                            <circle cx="36" cy="12" r="6" stroke-width="1.5"/>
+                            <circle cx="12" cy="36" r="6" stroke-width="1.5"/>
+                            <circle cx="36" cy="36" r="6" stroke-width="1.5"/>
+                            <line x1="18" y1="12" x2="30" y2="12" stroke-width="1"/>
+                            <line x1="12" y1="18" x2="12" y2="30" stroke-width="1"/>
+                        </svg>
+                    </div>
+                    <h3 class="card-title text-amber">Per-Channel Mode</h3>
+                    <p class="card-text">Independent RGB channel processing or joint color space compression. Choose the approach that best suits your image.</p>
+                </div>
+
+                <div class="feature-card card-magenta">
+                    <div class="card-icon-wrapper ring-magenta">
+                        <svg class="card-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor">
+                            <rect x="4" y="4" width="40" height="40" rx="4" stroke-width="1.5"/>
+                            <path d="M16 20 L24 12 L32 20"/>
+                            <line x1="24" y1="12" x2="24" y2="32"/>
+                            <line x1="12" y1="36" x2="36" y2="36"/>
+                        </svg>
+                    </div>
+                    <h3 class="card-title text-magenta">Drag & Drop</h3>
+                    <p class="card-text">Simple file upload with drag and drop support. JPG and PNG support up to 10MB. No sign-up required.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="how-it-works" class="section how-section">
+            <div class="section-header">
+                <span class="section-tag text-cyan">TECHNOLOGY</span>
+                <h2 class="section-title">The Mathematics of <span class="gradient-text-amber">Compression</span></h2>
+            </div>
+
+            <div class="process-flow">
+                <div class="process-step step-1">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <span class="step-label text-cyan">Center Data</span>
+                        <span class="step-desc">Subtract mean from all observations</span>
+                    </div>
+                    <div class="step-formula">
+                        <span class="text-cyan">x'</span><span class="text-muted"> = </span><span class="text-cyan">x</span><span class="text-muted"> - </span><span class="text-magenta">Î¼</span>
+                    </div>
+                </div>
+                <div class="process-arrow">
+                    <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1">
+                        <path d="M0 20 L30 20 M24 14 L32 20 L24 26" class="arrow-cyan"/>
+                    </svg>
+                </div>
+                <div class="process-step step-2">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <span class="step-label text-amber">Compute Covariance</span>
+                        <span class="step-desc">Calculate the covariance matrix C</span>
+                    </div>
+                    <div class="step-formula">
+                        <span class="text-cyan">C</span><span class="text-muted"> = </span><span class="text-cyan">cov</span><span class="text-muted">(</span><span class="text-amber">X</span><span class="text-muted">)</span>
+                    </div>
+                </div>
+                <div class="process-arrow">
+                    <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1">
+                        <path d="M0 20 L30 20 M24 14 L32 20 L24 26" class="arrow-amber"/>
+                    </svg>
+                </div>
+                <div class="process-step step-3">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <span class="step-label text-magenta">Eigen-Decompose</span>
+                        <span class="step-desc">Find eigenvalues Î»áµ¢ and eigenvectors váµ¢</span>
+                    </div>
+                    <div class="step-formula">
+                        <span class="text-cyan">C</span><span class="text-amber">v</span><span class="text-muted"> = </span><span class="text-magenta">Î»</span><span class="text-amber">v</span>
+                    </div>
+                </div>
+                <div class="process-arrow">
+                    <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1">
+                        <path d="M0 20 L30 20 M24 14 L32 20 L24 26" class="arrow-magenta"/>
+                    </svg>
+                </div>
+                <div class="process-step step-4">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <span class="step-label gradient-text-cyan">Reconstruct</span>
+                        <span class="step-desc">Build approximation from reduced data</span>
+                    </div>
+                    <div class="step-formula">
+                        <span class="text-amber">xÌ‚</span><span class="text-muted"> = </span><span class="text-cyan">P</span><sup class="text-muted">T</sup><span class="text-amber">y</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="formulas-showcase">
+                <div class="formula-box box-cyan">
+                    <span class="formula-label text-cyan">Mean Vector</span>
+                    <div class="formula-display-mini">
+                        <span class="formula-text text-cyan">Î¼</span>
+                        <span class="formula-text text-muted">=</span>
+                        <span class="formula-sum text-amber">âˆ‘</span>
+                        <span class="formula-sub-mini">i=1</span>
+                        <span class="formula-sup-mini">n</span>
+                        <span class="formula-text text-cyan">x</span>
+                        <span class="formula-sub-mini">i</span>
+                        <span class="formula-op text-muted">/</span>
+                        <span class="formula-text text-cyan">n</span>
+                    </div>
+                </div>
+                <div class="formula-box box-amber">
+                    <span class="formula-label text-amber">Covariance</span>
+                    <div class="formula-display-mini">
+                        <span class="formula-text text-cyan">cov</span>
+                        <span class="formula-paren-mini text-muted">(</span>
+                        <span class="formula-text text-cyan">x,y</span>
+                        <span class="formula-paren-mini text-muted">)</span>
+                        <span class="formula-text text-muted">=</span>
+                        <span class="formula-formula-mini">E[xy] - E[x]E[y]</span>
+                    </div>
+                </div>
+                <div class="formula-box box-magenta">
+                    <span class="formula-label text-magenta">Eigenvalue Problem</span>
+                    <div class="formula-display-mini">
+                        <span class="formula-paren-mini text-muted">(</span>
+                        <span class="formula-text text-cyan">C</span>
+                        <span class="formula-op text-muted">-</span>
+                        <span class="formula-text text-amber">Î»I</span>
+                        <span class="formula-paren-mini text-muted">)</span>
+                        <span class="formula-text text-cyan">v</span>
+                        <span class="formula-text text-muted">=</span>
+                        <span class="formula-text text-muted">0</span>
+                    </div>
+                </div>
+                <div class="formula-box box-cyan">
+                    <span class="formula-label text-cyan">Projection</span>
+                    <div class="formula-display-mini">
+                        <span class="formula-text text-amber">y</span>
+                        <span class="formula-text text-muted">=</span>
+                        <span class="formula-text text-cyan">P</span>
+                        <span class="formula-text text-cyan">x</span>
+                        <span class="formula-text text-muted">=</span>
+                        <span class="formula-sum text-magenta">âˆ‘</span>
+                        <span class="formula-text text-amber">v</span>
+                        <span class="formula-sup-mini">T</span>
+                        <span class="formula-text text-cyan">x</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="demo" class="section demo-section">
+            <div class="section-header">
+                <span class="section-tag text-amber">EXPERIENCE</span>
+                <h2 class="section-title">See It In <span class="gradient-text-magenta">Action</span></h2>
+                <p class="section-desc">Click the sections below to explore the full application interface</p>
+            </div>
+
+            <div class="demo-showcase">
+                <div class="demo-tabs">
+                    <button class="demo-tab active" data-demo="workspace">
+                        <span class="tab-icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="3" width="20" height="14" rx="2"/>
+                                <line x1="8" y1="21" x2="16" y2="21"/>
+                                <line x1="12" y1="17" x2="12" y2="21"/>
+                            </svg>
+                        </span>
+                        <span class="tab-text">Workspace</span>
+                    </button>
+                    <button class="demo-tab" data-demo="eigen">
+                        <span class="tab-icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="18" y1="20" x2="18" y2="10"/>
+                                <line x1="12" y1="20" x2="12" y2="4"/>
+                                <line x1="6" y1="20" x2="6" y2="14"/>
+                            </svg>
+                        </span>
+                        <span class="tab-text">Eigen Analysis</span>
+                    </button>
+                    <button class="demo-tab" data-demo="theory">
+                        <span class="tab-icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+                                <polyline points="2 17 12 22 22 17"/>
+                                <polyline points="2 12 12 17 22 12"/>
+                            </svg>
+                        </span>
+                        <span class="tab-text">Theory</span>
+                    </button>
+                </div>
+
+                <div class="demo-content">
+                    <div class="demo-panel active" id="demo-workspace">
+                        <div class="demo-preview">
+                            <div class="preview-header">
+                                <div class="preview-dots">
+                                    <span class="dot dot-red"></span>
+                                    <span class="dot dot-yellow"></span>
+                                    <span class="dot dot-green"></span>
+                                </div>
+                                <span class="preview-title">Workspace View</span>
+                            </div>
+                            <div class="preview-body">
+                                <div class="preview-grid">
+                                    <div class="preview-canvas left">
+                                        <div class="canvas-label">Original</div>
+                                        <div class="canvas-placeholder">
+                                            <span>Upload an image</span>
+                                        </div>
+                                    </div>
+                                    <div class="preview-divider">
+                                        <span>â†’</span>
+                                    </div>
+                                    <div class="preview-canvas right">
+                                        <div class="canvas-label">Compressed</div>
+                                        <div class="canvas-placeholder">
+                                            <span>Result appears here</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="preview-controls">
+                                    <div class="control-preview">
+                                        <span class="control-label">Quality</span>
+                                        <input type="range" class="range-preview" value="70" disabled>
+                                        <span class="control-value">0.70</span>
+                                    </div>
+                                    <div class="control-preview">
+                                        <span class="control-label">Mode</span>
+                                        <div class="mode-btns">
+                                            <button class="mode-btn active" disabled>Per-Channel</button>
+                                            <button class="mode-btn" disabled>Joint</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="demo-description">
+                            <h4>Compression Workspace</h4>
+                            <p>Upload any image and adjust compression parameters. The workspace shows side-by-side comparison with real-time metrics.</p>
+                            <ul class="feature-list">
+                                <li><span class="text-cyan">âœ“</span> Drag & drop image upload</li>
+                                <li><span class="text-amber">âœ“</span> Quality slider (0.1 - 1.0)</li>
+                                <li><span class="text-magenta">âœ“</span> Compression mode selection</li>
+                                <li><span class="text-cyan">âœ“</span> Live size comparison</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="demo-panel" id="demo-eigen">
+                        <div class="demo-preview">
+                            <div class="preview-header">
+                                <div class="preview-dots">
+                                    <span class="dot dot-red"></span>
+                                    <span class="dot dot-yellow"></span>
+                                    <span class="dot dot-green"></span>
+                                </div>
+                                <span class="preview-title">Eigen Analysis Panel</span>
+                            </div>
+                            <div class="preview-body">
+                                <div class="eigen-preview">
+                                    <div class="eigen-values">
+                                        <div class="eigen-item">
+                                            <span class="eigen-label text-cyan">Î»â‚</span>
+                                            <span class="eigen-bar"><span style="width: 85%"></span></span>
+                                            <span class="eigen-percent">85.2%</span>
+                                        </div>
+                                        <div class="eigen-item">
+                                            <span class="eigen-label text-amber">Î»â‚‚</span>
+                                            <span class="eigen-bar"><span style="width: 12%"></span></span>
+                                            <span class="eigen-percent">10.5%</span>
+                                        </div>
+                                        <div class="eigen-item">
+                                            <span class="eigen-label text-magenta">Î»â‚ƒ</span>
+                                            <span class="eigen-bar"><span style="width: 4%"></span></span>
+                                            <span class="eigen-percent">4.3%</span>
+                                        </div>
+                                    </div>
+                                    <div class="eigen-vectors">
+                                        <div class="vector-item">
+                                            <span class="text-cyan">vâ‚</span>
+                                            <span class="text-muted">(0.523, 0.456, 0.321)</span>
+                                        </div>
+                                        <div class="vector-item">
+                                            <span class="text-amber">vâ‚‚</span>
+                                            <span class="text-muted">(-0.312, 0.678, -0.234)</span>
+                                        </div>
+                                        <div class="vector-item">
+                                            <span class="text-magenta">vâ‚ƒ</span>
+                                            <span class="text-muted">(0.145, -0.089, 0.923)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="demo-description">
+                            <h4>Eigen Analysis Panel</h4>
+                            <p>Visualize the principal components extracted from your image. See variance distribution and eigenvector directions.</p>
+                            <ul class="feature-list">
+                                <li><span class="text-cyan">âœ“</span> Real-time eigenvalue display</li>
+                                <li><span class="text-amber">âœ“</span> Variance explained visualization</li>
+                                <li><span class="text-magenta">âœ“</span> 3D eigenvector coordinates</li>
+                                <li><span class="text-cyan">âœ“</span> Auto-rotation detection</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="demo-panel" id="demo-theory">
+                        <div class="demo-preview">
+                            <div class="preview-header">
+                                <div class="preview-dots">
+                                    <span class="dot dot-red"></span>
+                                    <span class="dot dot-yellow"></span>
+                                    <span class="dot dot-green"></span>
+                                </div>
+                                <span class="preview-title">Theory Section</span>
+                            </div>
+                            <div class="preview-body theory-preview">
+                                <div class="theory-block">
+                                    <h5 class="text-amber">The Method</h5>
+                                    <p>Principal Component Analysis transforms data into an orthogonal coordinate system where the greatest variance lies on the first principal component.</p>
+                                </div>
+                                <div class="theory-steps">
+                                    <div class="theory-step">01 Center Data</div>
+                                    <div class="theory-step">02 Compute Covariance</div>
+                                    <div class="theory-step">03 Eigen-Decompose</div>
+                                    <div class="theory-step">04 Project</div>
+                                    <div class="theory-step">05 Reconstruct</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="demo-description">
+                            <h4>Mathematical Theory</h4>
+                            <p>Deep dive into the mathematics behind PCA compression. Learn about covariance matrices, eigenvalues, and the power of dimensionality reduction.</p>
+                            <ul class="feature-list">
+                                <li><span class="text-cyan">âœ“</span> Step-by-step algorithm explanation</li>
+                                <li><span class="text-amber">âœ“</span> Quality metric descriptions</li>
+                                <li><span class="text-magenta">âœ“</span> SSIM and PSNR details</li>
+                                <li><span class="text-cyan">âœ“</span> Implementation specs</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="demo-cta">
+                <a href="https://pcaupgraded.vercel.app" target="_blank" class="btn btn-gradient btn-large">
+                    <span class="btn-text">Open Full Application</span>
+                    <span class="btn-icon">â†—</span>
+                </a>
+            </div>
+        </section>
+
+        <section id="metrics" class="section metrics-section">
+            <div class="section-header">
+                <span class="section-tag text-cyan">PERFORMANCE</span>
+                <h2 class="section-title">Benchmark <span class="gradient-text-magenta">Results</span></h2>
+            </div>
+
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-header">
+                        <span class="metric-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                            </svg>
+                        </span>
+                        <span class="metric-title">Processing Speed</span>
+                    </div>
+                    <div class="metric-values">
+                        <div class="metric-value">
+                            <span class="value text-cyan">&lt;100ms</span>
+                            <span class="label">Small (&lt;1MP)</span>
+                        </div>
+                        <div class="metric-value">
+                            <span class="value text-amber">0.5-2s</span>
+                            <span class="label">Medium (1-4MP)</span>
+                        </div>
+                        <div class="metric-value">
+                            <span class="value text-magenta">2-5s</span>
+                            <span class="label">Large (4-12MP)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-header">
+                        <span class="metric-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="18" y1="20" x2="18" y2="10"/>
+                                <line x1="12" y1="20" x2="12" y2="4"/>
+                                <line x1="6" y1="20" x2="6" y2="14"/>
+                            </svg>
+                        </span>
+                        <span class="metric-title">Quality Metrics</span>
+                    </div>
+                    <div class="metric-values">
+                        <div class="metric-value">
+                            <span class="value text-cyan">&gt;0.95</span>
+                            <span class="label">SSIM (high quality)</span>
+                        </div>
+                        <div class="metric-value">
+                            <span class="value text-amber">&gt;30dB</span>
+                            <span class="label">PSNR (good)</span>
+                        </div>
+                        <div class="metric-value">
+                            <span class="value text-magenta">10-70%</span>
+                            <span class="label">Size reduction</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-header">
+                        <span class="metric-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                            </svg>
+                        </span>
+                        <span class="metric-title">Memory Usage</span>
+                    </div>
+                    <div class="metric-values">
+                        <div class="metric-value">
+                            <span class="value text-cyan">~50MB</span>
+                            <span class="label">Small images</span>
+                        </div>
+                        <div class="metric-value">
+                            <span class="value text-amber">~200MB</span>
+                            <span class="label">Medium images</span>
+                        </div>
+                        <div class="metric-value">
+                            <span class="value text-magenta">~500MB</span>
+                            <span class="label">Large images</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tech" class="section tech-section">
+            <div class="section-header">
+                <span class="section-tag text-magenta">TECHNICAL</span>
+                <h2 class="section-title">Built <span class="gradient-text-cyan">With</span></h2>
+            </div>
+
+            <div class="tech-stack">
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5"/>
+                            <path d="M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <span class="tech-name">JavaScript</span>
+                    <span class="tech-desc">Core Logic & Canvas API</span>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
+                            <circle cx="12" cy="12" r="4"/>
+                        </svg>
+                    </div>
+                    <span class="tech-name">CSS3</span>
+                    <span class="tech-desc">Styling & Animations</span>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="3" y="3" width="18" height="18" rx="2"/>
+                            <line x1="3" y1="9" x2="21" y2="9"/>
+                            <line x1="9" y1="21" x2="9" y2="9"/>
+                        </svg>
+                    </div>
+                    <span class="tech-name">Linear Algebra</span>
+                    <span class="tech-desc">PCA & Eigen Decomposition</span>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2L2 19h20L12 2z"/>
+                        </svg>
+                    </div>
+                    <span class="tech-name">Vercel</span>
+                    <span class="tech-desc">Deployment Platform</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section cta-section">
+            <div class="cta-content">
+                <h2>Ready to <span class="gradient-text-amber">Compress</span>?</h2>
+                <p>Try the PCA Compressor today and experience the power of linear algebra in action.</p>
+                <div class="cta-buttons">
+                    <a href="https://pcaupgraded.vercel.app" target="_blank" class="btn btn-gradient btn-large">
+                        <span class="btn-text">Launch Application</span>
+                        <span class="btn-icon">â†’</span>
+                    </a>
+                    <a href="https://github.com/kushalchalla981-tech/pcaupgraded" target="_blank" class="btn btn-outline">
+                        <span class="btn-text">View on GitHub</span>
+                        <span class="btn-icon">â†—</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="logo-text">PCA</span>
+                <span class="logo-accent">UPGRADED</span>
+            </div>
+            <div class="footer-links">
+                <a href="https://pcaupgraded.vercel.app" target="_blank">Live App</a>
+                <a href="https://github.com/kushalchalla981-tech/pcaupgraded" target="_blank">GitHub</a>
+            </div>
+            <div class="footer-credit">
+                Built with Linear Algebra & JavaScript
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
