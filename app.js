@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.clientHeight;
             
-            if (scrollY >= sectionTop - 200) {
+            if (scrollY >= sectionTop - 300) {
                 current = section.getAttribute('id');
             }
         });
@@ -47,29 +47,67 @@ document.addEventListener('DOMContentLoaded', () => {
             const targetSection = document.querySelector(targetId);
             
             if (targetSection) {
-                targetSection.scrollIntoView({ behavior: 'smooth' });
+                targetSection.scrollIntoView({ 
+                    behavior: 'smooth',
+                    block: 'start'
+                });
             }
         });
     });
 
     const observerOptions = {
         threshold: 0.1,
-        rootMargin: '0px'
+        rootMargin: '-50px'
     };
 
-    const observer = new IntersectionObserver((entries) => {
+    const sectionObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
+                entry.target.classList.add('visible');
             }
         });
     }, observerOptions);
 
-    document.querySelectorAll('.feature-card, .metric-card, .tech-item, .process-step, .formula-box').forEach(el => {
+    sections.forEach(section => {
+        sectionObserver.observe(section);
+    });
+
+    const cardObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }, index * 100);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.feature-card, .metric-card, .tech-item, .process-step, .formula-box').forEach((el, i) => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = 'opacity 0.6s ease, transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+        cardObserver.observe(el);
+    });
+
+    const heroElements = document.querySelectorAll('.hero-text, .hero-visual, .scroll-indicator');
+    heroElements.forEach((el, i) => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(20px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(el);
+        setTimeout(() => {
+            el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+            el.style.opacity = '1';
+            el.style.transform = 'translateY(0)';
+        }, 300 + (i * 200));
+    });
+
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+        if (!ticking) {
+            window.requestAnimationFrame(() => {
+                ticking = false;
+            });
+            ticking = true;
+        }
     });
 });
