@@ -1,199 +1,82 @@
-# ðŸŽ¨ PCA Compressor Portfolio
+# PCA Compressor
 
-<p align="center">
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5">
-  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3">
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">
-  <img src="https://img.shields.io/badge/Linear%20Algebra-Math-blue?style=for-the-badge" alt="Math">
-  <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel">
-</p>
+**An interactive portfolio showcasing Principal Component Analysis for image compression.**
+
+A web application that compresses images using eigen-decomposition while preserving maximum visual quality.
+
+[Launch App](https://portfolio-eight-mu-n7cgc7espl.vercel.app/) Â· [Source Code](https://github.com/kushalchalla981-tech/pcaupgraded)
 
 ---
 
-<p align="center">
-  <pre>
-   â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•—â–ˆâ–ˆâ•—  â–ˆâ–ˆâ•— â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•— â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•—  â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•— â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•—â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•—â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•—â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•— 
-  â–ˆâ–ˆâ•”â•â•â•â•â•â–ˆâ–ˆâ•‘  â–ˆâ–ˆâ•‘â–ˆâ–ˆâ•”â•â•â–ˆâ–ˆâ•—â–ˆâ–ˆâ•”â•â•â–ˆâ–ˆâ•—â–ˆâ–ˆâ•”â•â•â•â–ˆâ–ˆâ•—â–ˆâ–ˆâ•”â•â•â•â•â•â•šâ•â•â–ˆâ–ˆâ•”â•â•â•â–ˆâ–ˆâ•”â•â•â•â•â•â–ˆâ–ˆâ•”â•â•â–ˆâ–ˆâ•—
-  â–ˆâ–ˆâ•‘     â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•‘â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•‘â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•”â•â–ˆâ–ˆâ•‘   â–ˆâ–ˆâ•‘â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•—   â–ˆâ–ˆâ•‘   â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•—  â–ˆâ–ˆâ•‘  â–ˆâ–ˆâ•‘
-  â–ˆâ–ˆâ•‘     â–ˆâ–ˆâ•”â•â•â–ˆâ–ˆâ•‘â–ˆâ–ˆâ•”â•â•â–ˆâ–ˆâ•‘â–ˆâ–ˆâ•”â•â•â–ˆâ–ˆâ•—â–ˆâ–ˆâ•‘   â–ˆâ–ˆâ•‘â•šâ•â•â•â•â–ˆâ–ˆâ•‘   â–ˆâ–ˆâ•‘   â–ˆâ–ˆâ•”â•â•â•  â–ˆâ–ˆâ•‘  â–ˆâ–ˆâ•‘
-  â•šâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•—â–ˆâ–ˆâ•‘  â–ˆâ–ˆâ•‘â–ˆâ–ˆâ•‘  â–ˆâ–ˆâ•‘â–ˆâ–ˆâ•‘  â–ˆâ–ˆâ•‘â•šâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•”â•â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•‘   â–ˆâ–ˆâ•‘   â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•—â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•”â•
-   â•šâ•â•â•â•â•â•â•šâ•â•  â•šâ•â•â•šâ•â•  â•šâ•â•â•šâ•â•  â•šâ•â• â•šâ•â•â•â•â•â• â•šâ•â•â•â•â•â•â•   â•šâ•â•   â•šâ•â•â•â•â•â•â•â•šâ•â•â•â•â•â• 
-  </pre>
-</p>
+## Overview
 
-<p align="center">
-  <em>Eigenvalue Â· Eigenvector Â· Principal Component Analysis</em>
-</p>
+This portfolio presents the PCA Compressor - a tool that applies linear algebra concepts to reduce image file sizes while maintaining perceptual quality. The mathematics behind it: covariance matrices, eigenvalue decomposition, and dimensionality reduction.
+
+Unlike traditional portfolios focused on individuals, this showcase highlights the **application itself** - its features, underlying mathematics, and technical implementation.
 
 ---
 
-## ðŸŒŸ Overview
-
-This is an **interactive portfolio showcase** for the PCA Compressor project - a web application that compresses images using **Principal Component Analysis** through eigen-decomposition.
-
-Unlike a traditional portfolio about a person, this showcase is entirely focused on presenting the **website/application** itself, highlighting its features, technology, and mathematical foundations.
-
-## ðŸŽ¯ Live Demo
-
-<p align="center">
-  <a href="https://pcaupgraded.vercel.app" target="_blank">
-    <img src="https://img.shields.io/badge/Launch-App-00d4ff?style=for-the-badge&logo=rocket&logoColor=black" alt="Launch App">
-  </a>
-</p>
-
----
-
-## âœ¨ Features
+## Features
 
 | Feature | Description |
 |---------|-------------|
-| ðŸŽ¯ **PCA Compression** | Dimensionality reduction via eigen-decomposition |
-| ðŸ“Š **Eigen Analysis** | Real-time eigenvalue/eigenvector visualization |
-| ðŸ”„ **Auto Rotation** | Smart correction using principal axis detection |
-| ðŸ“ **Tilt Control** | Fine-grained rotation adjustment (-45Â° to +45Â°) |
-| ðŸ“ˆ **Quality Metrics** | SSIM and PSNR for perceptual assessment |
-| ðŸŽ¨ **Color Overlays** | Eigenvector arrows in 5 colors |
-| ðŸ–¥ï¸ **Drag & Drop** | Simple file upload with drag and drop support |
+| **PCA Compression** | Dimensionality reduction via eigen-decomposition |
+| **Eigen Analysis** | Real-time eigenvalue and eigenvector visualization |
+| **Auto Rotation** | Principal axis detection for tilt correction |
+| **Quality Metrics** | SSIM and PSNR for perceptual assessment |
+| **Per-Channel Mode** | Independent RGB channel processing |
+| **Drag & Drop** | Simple file upload with JPG/PNG support |
 
 ---
 
-## ðŸ§® The Mathematics
+## The Mathematics
+
+**Principal Component Analysis** transforms correlated variables into uncorrelated principal components, ranked by variance explained.
 
 ```
-â•”â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•—
-â•‘                    PRINCIPAL COMPONENT ANALYSIS                    â•‘
-â• â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•£
-â•‘                                                                   â•‘
-â•‘   Image â†’ Mean Centering â†’ Covariance Matrix â†’ Eigen-Decomposition â•‘
-â•‘          â†’ Projection â†’ Reconstruction                           â•‘
-â•‘                                                                   â•‘
-â• â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•£
-â•‘                         CORE FORMULAS                             â•‘
-â• â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•£
-â•‘                                                                   â•‘
-â•‘   Covariance Matrix:  C = (X - Î¼)áµ€(X - Î¼) / (n-1)               â•‘
-â•‘                                                                   â•‘
-â•‘   Eigen-Decomposition:  CÂ·v = Î»Â·v                                â•‘
-â•‘                                                                   â•‘
-â•‘   Projection:  Y = XÂ·Vâ‚–                                          â•‘
-â•‘                                                                   â•‘
-â•‘   Reconstruction:  XÌ‚ = YÂ·Vâ‚–áµ€ + Î¼                                â•‘
-â•‘                                                                   â•‘
-â• â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•£
-â•‘                     VARIANCE EXPLAINED                            â•‘
-â• â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•£
-â•‘                                                                   â•‘
-â•‘   Î»â‚ â‰¥ Î»â‚‚ â‰¥ Î»â‚ƒ â‰¥ ... â‰¥ 0                                        â•‘
-â•‘                                                                   â•‘
-â•‘   ÏƒÂ²áµ¢ = Î»áµ¢ / Î£Î»â±¼ Ã— 100%                                         â•‘
-â•‘                                                                   â•‘
-â•šâ•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+Covariance Matrix:     C = (X - Î¼)áµ€(X - Î¼) / (n-1)
+
+Eigen-Decomposition:   CÂ·v = Î»Â·v
+
+Projection:            Y = XÂ·Vâ‚–
+
+Reconstruction:        XÌ‚ = YÂ·Vâ‚–áµ€ + Î¼
 ```
+
+The first principal component captures the direction of maximum variance. By keeping only the top k components, we achieve compression while retaining essential image information.
 
 ---
 
-## ðŸ”§ How It Works
+## How It Works
 
-```
-â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
-â”‚                                                                         â”‚
-â”‚   STEP 1: Center Data                                                   â”‚
-â”‚   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•                                                   â”‚
-â”‚   Subtract the mean from all observations                               â”‚
-â”‚                                                                         â”‚
-â”‚   x' = x - Î¼                                                           â”‚
-â”‚                                                                         â”‚
-â”œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¤
-â”‚                                                                         â”‚
-â”‚   STEP 2: Compute Covariance                                            â”‚
-â”‚   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•                                              â”‚
-â”‚   Calculate the covariance matrix C                                      â”‚
-â”‚                                                                         â”‚
-â”‚   C = cov(X)                                                            â”‚
-â”‚                                                                         â”‚
-â”œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¤
-â”‚                                                                         â”‚
-â”‚   STEP 3: Eigen-Decompose                                               â”‚
-â”‚   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•                                                 â”‚
-â”‚   Find eigenvalues Î»áµ¢ and eigenvectors váµ¢                              â”‚
-â”‚                                                                         â”‚
-â”‚   CÂ·váµ¢ = Î»áµ¢Â·váµ¢                                                         â”‚
-â”‚                                                                         â”‚
-â”œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¤
-â”‚                                                                         â”‚
-â”‚   STEP 4: Project                                                       â”‚
-â”‚   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•                                                     â”‚
-â”‚   Project data onto k largest eigenvectors                              â”‚
-â”‚                                                                         â”‚
-â”‚   Y = XÂ·Vâ‚–                                                              â”‚
-â”‚                                                                         â”‚
-â”œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¤
-â”‚                                                                         â”‚
-â”‚   STEP 5: Reconstruct                                                  â”‚
-â”‚   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•                                                   â”‚
-â”‚   Build approximation from reduced data                                 â”‚
-â”‚                                                                         â”‚
-â”‚   XÌ‚ = YÂ·Vâ‚–áµ€ + Î¼                                                       â”‚
-â”‚                                                                         â”‚
-â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
-```
+1. **Center Data** - Subtract mean from all observations
+2. **Compute Covariance** - Calculate the covariance matrix C
+3. **Eigen-Decompose** - Find eigenvalues Î»áµ¢ and eigenvectors váµ¢
+4. **Project** - Project data onto k largest eigenvectors
+5. **Reconstruct** - Build approximation from reduced data
 
 ---
 
-## ðŸ“Š Performance Metrics
+## Performance
 
-| Image Size | Processing Time | Memory | Quality Target |
-|------------|----------------|--------|-----------------|
+| Image Size | Processing Time | Memory | Quality |
+|------------|-----------------|--------|---------|
 | Small (<1MP) | <100ms | ~50MB | SSIM > 0.95 |
 | Medium (1-4MP) | 500ms-2s | ~200MB | SSIM > 0.90 |
 | Large (4-12MP) | 2-5s | ~500MB | SSIM > 0.85 |
-| Very Large (>12MP) | Variable | Configurable | SSIM > 0.80 |
 
 ---
 
-## ðŸŽ¨ Color Palette
+## Tech Stack
 
-<p align="center">
-
-| Color | Hex | Usage |
-|-------|-----|-------|
-| <span style="color:#00d4ff">â— Cyan</span> | `#00d4ff` | Primary accent, Î»â‚ |
-| <span style="color:#ffb347">â— Amber</span> | `#ffb347` | Secondary accent, Î»â‚‚ |
-| <span style="color:#ff6b9d">â— Magenta</span> | `#ff6b9d` | Tertiary accent, Î»â‚ƒ |
-
-</p>
+- **JavaScript** - Core logic and Canvas API
+- **CSS3** - Animations and styling
+- **Linear Algebra** - PCA and eigen decomposition
+- **Vercel** - Deployment
 
 ---
 
-## ðŸ—ï¸ Architecture
-
-```
-â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
-â”‚  Client Layer     â”‚  Web Interface  â”‚  Canvas API            â”‚
-â”œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¤
-â”‚  Service Layer    â”‚  Compression    â”‚  Metrics              â”‚
-â”œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¤
-â”‚  Core Compute     â”‚  PCA Engine     â”‚  Eigen Analysis       â”‚
-â”œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¤
-â”‚  Utility Layer    â”‚  Image I/O      â”‚  Color Space          â”‚
-â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
-```
-
----
-
-## ðŸ“ Project Structure
-
-```
-portfolio/
-â”œâ”€â”€ index.html          # Main showcase page
-â”œâ”€â”€ styles.css          # Styling with animations
-â”œâ”€â”€ app.js              # Interactive components
-â””â”€â”€ README.md           # This file
-```
-
----
-
-## ðŸš€ Quick Start
+## Quick Start
 
 ```bash
 # Clone the repository
@@ -201,56 +84,16 @@ git clone https://github.com/kushalchalla981-tech/portfolio.git
 cd portfolio
 
 # Open in browser
-# Simply open index.html in your web browser
-```
+open index.html
 
-Or serve with any local server:
-
-```bash
-# Using Python
-python -m http.server 8000
-
-# Using Node.js
+# Or serve locally
 npx serve
 ```
 
 ---
 
-## ðŸ”— Links
+## Links
 
-<p align="center">
-
-| Platform | Link |
-|----------|------|
-| ðŸŒ **Live App** | [pcaupgraded.vercel.app](https://pcaupgraded.vercel.app) |
-| ðŸ“‚ **Source Code** | [GitHub Repository](https://github.com/kushalchalla981-tech/pcaupgraded) |
-| ðŸŽ¨ **This Portfolio** | [portfolio.kushalchalla.tech](https://github.com/kushalchalla981-tech/portfolio) |
-
-</p>
-
----
-
-## ðŸ“ License
-
-<p align="center">
-
-MIT License - see [LICENSE](LICENSE) for details.
-
-</p>
-
----
-
-<p align="center">
-
-```
-â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•— â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•—â–ˆâ–ˆâ•—   â–ˆâ–ˆâ•—â–ˆâ–ˆâ–ˆâ•—   â–ˆâ–ˆâ–ˆâ•—â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•—â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•— 
-â–ˆâ–ˆâ•”â•â•â–ˆâ–ˆâ•—â–ˆâ–ˆâ•”â•â•â•â•â•â–ˆâ–ˆâ•‘   â–ˆâ–ˆâ•‘â–ˆâ–ˆâ–ˆâ–ˆâ•— â–ˆâ–ˆâ–ˆâ–ˆâ•‘â–ˆâ–ˆâ•”â•â•â•â•â•â–ˆâ–ˆâ•”â•â•â–ˆâ–ˆâ•—
-â–ˆâ–ˆâ•‘  â–ˆâ–ˆâ•‘â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•—  â–ˆâ–ˆâ•‘   â–ˆâ–ˆâ•‘â–ˆâ–ˆâ•”â–ˆâ–ˆâ–ˆâ–ˆâ•”â–ˆâ–ˆâ•‘â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•—  â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•”â•
-â–ˆâ–ˆâ•‘  â–ˆâ–ˆâ•‘â–ˆâ–ˆâ•”â•â•â•  â•šâ–ˆâ–ˆâ•— â–ˆâ–ˆâ•”â•â–ˆâ–ˆâ•‘â•šâ–ˆâ–ˆâ•”â•â–ˆâ–ˆâ•‘â–ˆâ–ˆâ•”â•â•â•  â–ˆâ–ˆâ•”â•â•â–ˆâ–ˆâ•—
-â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•”â•â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•— â•šâ–ˆâ–ˆâ–ˆâ–ˆâ•”â• â–ˆâ–ˆâ•‘ â•šâ•â• â–ˆâ–ˆâ•‘â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•—â–ˆâ–ˆâ•‘  â–ˆâ–ˆâ•‘
-â•šâ•â•â•â•â•â• â•šâ•â•â•â•â•â•â•  â•šâ•â•â•â•  â•šâ•â•     â•šâ•â•â•šâ•â•â•â•â•â•â•â•šâ•â•  â•šâ•â•
-```
-
-Built with â¤ï¸ using Linear Algebra & JavaScript
-
-</p>
+- [Live Portfolio](https://portfolio-eight-mu-n7cgc7espl.vercel.app/)
+- [Live App](https://pcaupgraded.vercel.app)
+- [Source Repository](https://github.com/kushalchalla981-tech/pcaupgraded)
