@@ -1,96 +1,210 @@
-# <span style="color:#00d4ff">P</span><span style="color:#ffb347">C</span><span style="color:#ff6b9d">A</span> Compressor
+# <span style="color:#00d4ff">â—‡</span> <span style="color:#00d4ff">PCA</span> <span style="color:#ffb347">Compressor</span> <span style="color:#ff6b9d">â—‡</span>
 
-**An interactive portfolio showcasing Principal Component Analysis for image compression.**
+<p align="center">
+  <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" width="100%">
+</p>
 
-> A web application that compresses images using eigen-decomposition while preserving maximum visual quality.
+<p align="center">
 
-[![Live Portfolio](https://img.shields.io/badge/Live%20Portfolio-00d4ff?style=for-the-badge&logo=rocket&logoColor=black)](https://portfolio-eight-mu-n7cgc7espl.vercel.app/)
-[![Live App](https://img.shields.io/badge/Live%20App-ffb347?style=for-the-badge&logo=vercel&logoColor=black)](https://pcaupgraded.vercel.app)
-[![Source](https://img.shields.io/badge/Source-GitHub-ff6b9d?style=for-the-badge&logo=github&logoColor=black)](https://github.com/kushalchalla981-tech/pcaupgraded)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
----
+</p>
 
-## <span style="color:#00d4ff">â–Ž</span> Overview
+<p align="center">
 
-This portfolio presents the **PCA Compressor** - a tool that applies linear algebra concepts to reduce image file sizes while maintaining perceptual quality.
+â”‚ [ðŸš€ Live Portfolio](https://portfolio-eight-mu-n7cgc7espl.vercel.app/) â”‚
+â”‚ â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ â”‚
+â”‚ [ðŸŒ Live App](https://pcaupgraded.vercel.app) â”‚
+â”‚ [ðŸ“‚ Source Code](https://github.com/kushalchalla981-tech/pcaupgraded) â”‚
 
-Unlike traditional portfolios focused on individuals, this showcase highlights the **application itself** - its features, underlying mathematics, and technical implementation.
-
----
-
-## <span style="color:#ffb347">â–Ž</span> Features
-
-| | Feature | Description |
-|:-|---------|-------------|
-| <span style="color:#00d4ff">â—‰</span> | **PCA Compression** | Dimensionality reduction via eigen-decomposition |
-| <span style="color:#ffb347">â—‰</span> | **Eigen Analysis** | Real-time eigenvalue and eigenvector visualization |
-| <span style="color:#ff6b9d">â—‰</span> | **Auto Rotation** | Principal axis detection for tilt correction |
-| <span style="color:#00d4ff">â—‰</span> | **Quality Metrics** | SSIM and PSNR for perceptual assessment |
-| <span style="color:#ffb347">â—‰</span> | **Per-Channel Mode** | Independent RGB channel processing |
-| <span style="color:#ff6b9d">â—‰</span> | **Drag & Drop** | Simple file upload with JPG/PNG support |
+</p>
 
 ---
 
-## <span style="color:#ff6b9d">â–Ž</span> The Mathematics
+<p align="center">
 
-**Principal Component Analysis** transforms correlated variables into uncorrelated principal components, ranked by variance explained.
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+â”‚                                                                             â”‚
+â”‚     â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•—â–ˆâ–ˆâ•—  â–ˆâ–ˆâ•—â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•—                                              â”‚
+â”‚     â•šâ•â•â–ˆâ–ˆâ•”â•â•â•â–ˆâ–ˆâ•‘  â–ˆâ–ˆâ•‘â–ˆâ–ˆâ•”â•â•â•â•â•                                              â”‚
+â”‚        â–ˆâ–ˆâ•‘   â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•‘â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•—                                                â”‚
+â”‚        â–ˆâ–ˆâ•‘   â–ˆâ–ˆâ•”â•â•â–ˆâ–ˆâ•‘â–ˆâ–ˆâ•”â•â•â•                                                â”‚
+â”‚        â–ˆâ–ˆâ•‘   â–ˆâ–ˆâ•‘  â–ˆâ–ˆâ•‘â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•—                                              â”‚
+â”‚        â•šâ•â•   â•šâ•â•  â•šâ•â•â•šâ•â•â•â•â•â•â•                                              â”‚
+â”‚                                                                             â”‚
+â”‚     â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•— â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•— â–ˆâ–ˆâ–ˆâ•—   â–ˆâ–ˆâ–ˆâ•—â–ˆâ–ˆâ–ˆâ•—   â–ˆâ–ˆâ–ˆâ•— â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•— â–ˆâ–ˆâ–ˆâ•—   â–ˆâ–ˆâ•—â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•— â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•—â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•—  â”‚
+â”‚    â–ˆâ–ˆâ•”â•â•â•â•â•â–ˆâ–ˆâ•”â•â•â•â–ˆâ–ˆâ•—â–ˆâ–ˆâ–ˆâ–ˆâ•— â–ˆâ–ˆâ–ˆâ–ˆâ•‘â–ˆâ–ˆâ–ˆâ–ˆâ•— â–ˆâ–ˆâ–ˆâ–ˆâ•‘â–ˆâ–ˆâ•”â•â•â–ˆâ–ˆâ•—â–ˆâ–ˆâ–ˆâ–ˆâ•—  â–ˆâ–ˆâ•‘â–ˆâ–ˆâ•”â•â•â•â•â•â–ˆâ–ˆâ•”â•â•â•â•â•â–ˆâ–ˆâ•”â•â•â–ˆâ–ˆâ•— â”‚
+â”‚    â–ˆâ–ˆâ•‘     â–ˆâ–ˆâ•‘   â–ˆâ–ˆâ•‘â–ˆâ–ˆâ•”â–ˆâ–ˆâ–ˆâ–ˆâ•”â–ˆâ–ˆâ•‘â–ˆâ–ˆâ•”â–ˆâ–ˆâ–ˆâ–ˆâ•”â–ˆâ–ˆâ•‘â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•‘â–ˆâ–ˆâ•”â–ˆâ–ˆâ•— â–ˆâ–ˆâ•‘â–ˆâ–ˆâ•‘     â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•—  â–ˆâ–ˆâ•‘  â–ˆâ–ˆâ•‘ â”‚
+â”‚    â–ˆâ–ˆâ•‘     â–ˆâ–ˆâ•‘   â–ˆâ–ˆâ•‘â–ˆâ–ˆâ•‘â•šâ–ˆâ–ˆâ•”â•â–ˆâ–ˆâ•‘â–ˆâ–ˆâ•‘â•šâ–ˆâ–ˆâ•”â•â–ˆâ–ˆâ•‘â–ˆâ–ˆâ•”â•â•â–ˆâ–ˆâ•‘â–ˆâ–ˆâ•‘â•šâ–ˆâ–ˆâ•—â–ˆâ–ˆâ•‘â–ˆâ–ˆâ•‘     â–ˆâ–ˆâ•”â•â•â•  â–ˆâ–ˆâ•‘  â–ˆâ–ˆâ•‘ â”‚
+â”‚    â•šâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•—â•šâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•”â•â–ˆâ–ˆâ•‘ â•šâ•â• â–ˆâ–ˆâ•‘â–ˆâ–ˆâ•‘ â•šâ•â• â–ˆâ–ˆâ•‘â–ˆâ–ˆâ•‘  â–ˆâ–ˆâ•‘â–ˆâ–ˆâ•‘ â•šâ–ˆâ–ˆâ–ˆâ–ˆâ•‘â•šâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•—â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•—â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•”â• â”‚
+â”‚     â•šâ•â•â•â•â•â• â•šâ•â•â•â•â•â• â•šâ•â•     â•šâ•â•â•šâ•â•     â•šâ•â•â•šâ•â•  â•šâ•â•â•šâ•â•  â•šâ•â•â•â• â•šâ•â•â•â•â•â•â•šâ•â•â•â•â•â•â•â•šâ•â•â•â•â•â•  â”‚
+â”‚                                                                             â”‚
+â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
 
-```mathematica
-Covariance Matrix:     C = (X - Î¼)áµ€(X - Î¼) / (n-1)
+</p>
 
-Eigen-Decomposition:   CÂ·v = Î»Â·v
+---
 
-Projection:            Y = XÂ·Vâ‚–
+## â—‡ Overview
 
-Reconstruction:        XÌ‚ = YÂ·Vâ‚–áµ€ + Î¼
+> *"Transforming images through the power of linear algebra"*
+
+This portfolio showcases the **PCA Compressor** - a web application that uses **Principal Component Analysis** to compress images while preserving maximum visual quality.
+
+Unlike traditional portfolios about people, this one celebrates the **application itself** - its features, mathematics, and technical implementation.
+
+```
+â•­â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â•®
+â”‚                                                             â”‚
+â”‚   ðŸŽ¯ PCA Compression    ðŸ“Š Eigen Analysis    ðŸ”„ Auto Rotate â”‚
+â”‚   ðŸ“ Tilt Control      ðŸ“ˆ Quality Metrics   ðŸŽ¨ Color Modes â”‚
+â”‚                                                             â”‚
+â•°â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â•¯
 ```
 
-The first principal component captures the direction of maximum variance. By keeping only the top k components, we achieve compression while retaining essential image information.
+---
+
+## â—‡ Features
+
+<span style="color:#00d4ff">â—†</span> **PCA Compression**
+Dimensionality reduction via eigen-decomposition. Retain maximum variance with minimal components.
+
+<span style="color:#ffb347">â—†</span> **Eigen Analysis**
+Real-time visualization of eigenvalues and eigenvectors. See the math behind the magic.
+
+<span style="color:#ff6b9d">â—†</span> **Auto Rotation**
+Smart tilt correction using principal axis detection. Automatically straighten your images.
+
+<span style="color:#00d4ff">â—†</span> **Quality Metrics**
+SSIM and PSNR metrics for perceptual quality assessment.
+
+<span style="color:#ffb347">â—†</span> **Per-Channel Mode**
+Independent RGB channel processing or joint color space compression.
+
+<span style="color:#ff6b9d">â—†</span> **Drag & Drop**
+Simple file upload with drag and drop. JPG and PNG support up to 10MB.
 
 ---
 
-## <span style="color:#00d4ff">â–Ž</span> How It Works
+## â—‡ The Mathematics
 
 ```
-â‘  Center Data      â†’  Subtract mean from all observations
-â‘¡ Compute          â†’  Calculate the covariance matrix C  
-â‘¢ Eigen-Decompose â†’  Find eigenvalues Î»áµ¢ and eigenvectors váµ¢
-â‘£ Project         â†’  Project data onto k largest eigenvectors
-â‘¤ Reconstruct     â†’  Build approximation from reduced data
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+â”‚                                                              â”‚
+â”‚     â•”â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•—   â”‚
+â”‚     â•‘         PRINCIPAL COMPONENT ANALYSIS                â•‘   â”‚
+â”‚     â• â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•£   â”‚
+â”‚     â•‘                                                       â•‘   â”‚
+â”‚     â•‘   ðŸ“ Mean Centering                                  â•‘   â”‚
+â”‚     â•‘      x' = x - Î¼                                      â•‘   â”‚
+â”‚     â•‘                                                       â•‘   â”‚
+â”‚     â•‘   ðŸ“Š Covariance Matrix                               â•‘   â”‚
+â”‚     â•‘      C = (X - Î¼)áµ€(X - Î¼) / (n-1)                    â•‘   â”‚
+â”‚     â•‘                                                       â•‘   â”‚
+â”‚     â•‘   ðŸ”¢ Eigen-Decomposition                             â•‘   â”‚
+â”‚     â•‘      CÂ·v = Î»Â·v                                       â•‘   â”‚
+â”‚     â•‘                                                       â•‘   â”‚
+â”‚     â•‘   ðŸ“ˆ Projection                                      â•‘   â”‚
+â”‚     â•‘      Y = XÂ·Vâ‚–                                        â•‘   â”‚
+â”‚     â•‘                                                       â•‘   â”‚
+â”‚     â•‘   ðŸ”„ Reconstruction                                  â•‘   â”‚
+â”‚     â•‘      XÌ‚ = YÂ·Vâ‚–áµ€ + Î¼                                  â•‘   â”‚
+â”‚     â•‘                                                       â•‘   â”‚
+â”‚     â•šâ•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•   â”‚
+â”‚                                                              â”‚
+â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
 ```
 
 ---
 
-## <span style="color:#ffb347">â–Ž</span> Performance
+## â—‡ How It Works
 
-| Image Size | Processing Time | Memory | Quality |
-|:-----------|:--------------|:-------|:--------|
-| Small (<1MP) | <span style="color:#00d4ff">**<100ms**</span> | ~50MB | SSIM > 0.95 |
-| Medium (1-4MP) | <span style="color:#ffb347">**500ms-2s**</span> | ~200MB | SSIM > 0.90 |
-| Large (4-12MP) | <span style="color:#ff6b9d">**2-5s**</span> | ~500MB | SSIM > 0.85 |
+```
+     INPUT         PROCESS              OUTPUT
+    â”Œâ”€â”€â”€â”€â”€â”      â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”           â”Œâ”€â”€â”€â”€â”€â”
+    â”‚     â”‚      â”‚ Center â”‚           â”‚     â”‚
+    â”‚ IMG â”‚ â”€â”€â”€â–º â”‚   â†“    â”‚ â”€â”€â”€â”€â”€â”€â”€â”€â–º â”‚COMPRâ”‚
+    â”‚     â”‚      â”‚ Covar  â”‚           â”‚ IMG â”‚
+    â””â”€â”€â”€â”€â”€â”˜      â”‚   â†“    â”‚           â””â”€â”€â”€â”€â”€â”˜
+                 â”‚ Eigen  â”‚
+                 â”‚   â†“    â”‚
+                 â”‚ Projectâ”‚
+                 â”‚   â†“    â”‚
+                 â”‚ Reconstâ”‚
+                 â””â”€â”€â”€â”€â”€â”€â”€â”€â”˜
+```
 
----
-
-## <span style="color:#ff6b9d">â–Ž</span> Color Palette
-
-| | Color | Hex | Usage |
-|:-|-------|-----|-------|
-| <span style="color:#00d4ff">â—</span> | **Cyan** | `#00d4ff` | Primary accent, Î»â‚ |
-| <span style="color:#ffb347">â—</span> | **Amber** | `#ffb347` | Secondary accent, Î»â‚‚ |
-| <span style="color:#ff6b9d">â—</span> | **Magenta** | `#ff6b9d` | Tertiary accent, Î»â‚ƒ |
-
----
-
-## <span style="color:#00d4ff">â–Ž</span> Tech Stack
-
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
-![Linear Algebra](https://img.shields.io/badge/Linear%20Algebra-Math-blue?style=flat)
-![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat&logo=vercel&logoColor=white)
+<span style="color:#00d4ff">â‘ </span> **Center Data** - Subtract mean from observations  
+<span style="color:#ffb347">â‘¡</span> **Compute** - Calculate covariance matrix C  
+<span style="color:#ff6b9d">â‘¢</span> **Decompose** - Find eigenvalues Î»áµ¢ and eigenvectors váµ¢  
+<span style="color:#00d4ff">â‘£</span> **Project** - Project onto k largest eigenvectors  
+<span style="color:#ffb347">â‘¤</span> **Reconstruct** - Build approximation from reduced data
 
 ---
 
-## <span style="color:#ffb347">â–Ž</span> Quick Start
+## â—‡ Performance
+
+```
+â•­â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â•®
+â”‚                                                             â”‚
+â”‚   âš¡ SPEED           ðŸ’¾ MEMORY          ðŸ“Š QUALITY          â”‚
+â”‚   â”€â”€â”€â”€â”€â”€â”€â”€â”€          â”€â”€â”€â”€â”€â”€â”€â”€â”€          â”€â”€â”€â”€â”€â”€â”€â”€            â”‚
+â”‚   <100ms  Small      ~50MB   Small      SSIM > 0.95        â”‚
+â”‚   0.5-2s  Medium    ~200MB  Medium     SSIM > 0.90        â”‚
+â”‚   2-5s    Large     ~500MB  Large      SSIM > 0.85        â”‚
+â”‚                                                             â”‚
+â•°â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â•¯
+```
+
+---
+
+## â—‡ Color Palette
+
+```
+   â•­â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â•®
+   â”‚                                                          â”‚
+   â”‚    <span style="color:#00d4ff">â¬¤</span> CYAN     #00d4ff    Primary accent, Î»â‚    â”‚
+   â”‚    <span style="color:#ffb347">â¬¤</span> AMBER    #ffb347    Secondary accent, Î»â‚‚   â”‚
+   â”‚    <span style="color:#ff6b9d">â¬¤</span> MAGENTA  #ff6b9d    Tertiary accent, Î»â‚ƒ    â”‚
+   â”‚                                                          â”‚
+   â•°â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â•¯
+```
+
+---
+
+## â—‡ Tech Stack
+
+```
+   â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”     â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”     â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+   â”‚             â”‚     â”‚             â”‚     â”‚             â”‚
+   â”‚  JavaScript â”‚     â”‚    CSS3     â”‚     â”‚    Linear   â”‚
+   â”‚   â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆ    â”‚     â”‚    â–ˆâ–ˆâ–ˆâ–ˆ     â”‚     â”‚   Algebra   â”‚
+   â”‚   â–ˆâ–ˆ  â–ˆâ–ˆ    â”‚     â”‚   â–ˆâ–ˆ  â–ˆâ–ˆ    â”‚     â”‚     âˆ«       â”‚
+   â”‚   â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆ    â”‚     â”‚   â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆ    â”‚     â”‚             â”‚
+   â”‚             â”‚     â”‚             â”‚     â”‚             â”‚
+   â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜     â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜     â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
+              â•²               â”‚                   â•±
+               â•²              â”‚                  â•±
+                â•²             â”‚                 â•±
+                 â•²            â”‚                â•±
+                  â•²           â”‚               â•±
+                   â•²          â”‚              â•±
+                    â•²    â”Œâ”€â”€â”€â”€â”´â”€â”€â”€â”€â”        â•±
+                     â•²   â”‚ Vercel  â”‚       â•±
+                      â•²  â”‚   â–²     â”‚      â•±
+                       â•² â”‚  â•± â•²    â”‚     â•±
+                        â•²â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜    â•±
+                         â•²              â•±
+                          â•²            â•±
+                           â•²          â•±
+                            â•°â”€â”€â”€â”€â”€â”€â”€â”€â”€â•¯
+```
+
+---
+
+## â—‡ Quick Start
 
 ```bash
 # Clone the repository
@@ -106,16 +220,33 @@ npx serve
 
 ---
 
-## <span style="color:#ff6b9d">â–Ž</span> Links
+## â—‡ Links
 
-| | Platform | Link |
-|:-|----------|------|
-| ðŸš€ | **Live Portfolio** | [portfolio-eight-mu-n7cgc7espl.vercel.app](https://portfolio-eight-mu-n7cgc7espl.vercel.app/) |
-| ðŸŒ | **Live App** | [pcaupgraded.vercel.app](https://pcaupgraded.vercel.app) |
-| ðŸ“‚ | **Source Repository** | [github.com/kushalchalla981-tech/pcaupgraded](https://github.com/kushalchalla981-tech/pcaupgraded) |
+<p align="center">
+
+â”‚ [ðŸš€ Live Portfolio](https://portfolio-eight-mu-n7cgc7espl.vercel.app/) â”‚
+â”‚ [ðŸŒ Live App](https://pcaupgraded.vercel.app) â”‚
+â”‚ [ðŸ“‚ Source Code](https://github.com/kushalchalla981-tech/pcaupgraded) â”‚
+
+</p>
 
 ---
 
 <p align="center">
-  <sub>Built with</sub> <span style="color:#00d4ff">â—†</span> <sub>Linear Algebra &</sub> <span style="color:#ffb347">â—†</span> <sub>JavaScript</sub>
+
+```
+â•­â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â•®
+â”‚                                                                     â”‚
+â”‚   â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•— â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•—â–ˆâ–ˆâ•—   â–ˆâ–ˆâ•—â–ˆâ–ˆâ–ˆâ•—   â–ˆâ–ˆâ•—â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•—â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•—â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•— â–ˆâ–ˆâ•—  â”‚
+â”‚   â–ˆâ–ˆâ•”â•â•â–ˆâ–ˆâ•—â–ˆâ–ˆâ•”â•â•â•â•â•â–ˆâ–ˆâ•‘   â–ˆâ–ˆâ•‘â–ˆâ–ˆâ–ˆâ–ˆâ•—  â–ˆâ–ˆâ•‘â•šâ•â•â–ˆâ–ˆâ•”â•â•â•â–ˆâ–ˆâ•”â•â•â•â•â•â–ˆâ–ˆâ•”â•â•â–ˆâ–ˆâ•—â–ˆâ–ˆâ•‘  â”‚
+â”‚   â–ˆâ–ˆâ•‘  â–ˆâ–ˆâ•‘â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•—  â–ˆâ–ˆâ•‘   â–ˆâ–ˆâ•‘â–ˆâ–ˆâ•”â–ˆâ–ˆâ•— â–ˆâ–ˆâ•‘   â–ˆâ–ˆâ•‘   â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•—  â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•”â•â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•—â”‚
+â”‚   â–ˆâ–ˆâ•‘  â–ˆâ–ˆâ•‘â–ˆâ–ˆâ•”â•â•â•  â•šâ–ˆâ–ˆâ•— â–ˆâ–ˆâ•”â•â–ˆâ–ˆâ•‘â•šâ–ˆâ–ˆâ•—â–ˆâ–ˆâ•‘   â–ˆâ–ˆâ•‘   â–ˆâ–ˆâ•”â•â•â•  â–ˆâ–ˆâ•”â•â•â–ˆâ–ˆâ•—â•šâ•â•â•â•â–ˆâ–ˆâ•‘â”‚
+â”‚   â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•”â•â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•— â•šâ–ˆâ–ˆâ–ˆâ–ˆâ•”â• â–ˆâ–ˆâ•‘ â•šâ–ˆâ–ˆâ–ˆâ–ˆâ•‘   â–ˆâ–ˆâ•‘   â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•—â–ˆâ–ˆâ•‘  â–ˆâ–ˆâ•‘     â–ˆâ–ˆâ•‘â”‚
+â”‚   â•šâ•â•â•â•â•â• â•šâ•â•â•â•â•â•â•  â•šâ•â•â•â•  â•šâ•â•  â•šâ•â•â•â•   â•šâ•â•   â•šâ•â•â•â•â•â•â•â•šâ•â•  â•šâ•â•     â•šâ•â•â”‚
+â”‚                                                                     â”‚
+â•°â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â•¯
+```
+
+<span style="color:#00d4ff">â—†</span> Built with Linear Algebra & JavaScript <span style="color:#ffb347">â—†</span>
+
 </p>
